@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Group of Companies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-indigo-600">PURE GROUP</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#companies" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Companies</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="#companies" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Companies</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg pt-16 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 fade-in">
+                    PURE GROUP
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-8 fade-in stagger-1">
+                    Excellence Across Industries
+                </p>
+                <p class="text-lg text-white/90 mb-12 max-w-3xl mx-auto fade-in stagger-2">
+                    Leading the way in Electronics, Business Solutions, and Real Estate with innovation, integrity, and uncompromising quality.
+                </p>
+                <button onclick="scrollToSection('companies')" class="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors fade-in stagger-3">
+                    Explore Our Companies
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Companies</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Three distinct companies, one shared commitment to excellence and innovation
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pure Electronics -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pure Electronics</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Cutting-edge electronic solutions and innovative technology products for modern businesses and consumers.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Consumer Electronics
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Industrial Components
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Smart Home Solutions
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Technical Support
+                        </li>
+                    </ul>
+                    <button onclick="showSection('pure-electronics')" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Pure Business Solutions -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pure Business Solutions</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Comprehensive business consulting and strategic solutions to drive growth and operational excellence.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Strategic Consulting
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Digital Transformation
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Process Optimization
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Strategic Planning
+                        </li>
+                    </ul>
+                    <button onclick="showSection('pure-business')" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Pure Real Estate -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border border-gray-100">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Pure Real Estate</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-center">
+                        Premium real estate services including residential, commercial, and investment property solutions.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Residential Sales
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Commercial Properties
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Investment Advisory
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Property Management
+                        </li>
+                    </ul>
+                    <button onclick="showSection('pure-realestate')" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pure Electronics Details -->
+    <section id="pure-electronics" class="py-20 bg-blue-50 hidden company-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pure Electronics</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Leading the future of technology with innovative electronic solutions
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Electronic Solutions</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Pure Electronics specializes in cutting-edge electronic products and solutions that power modern life. From consumer electronics to industrial components, we deliver quality and innovation.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div onclick="showProductGallery('consumer-electronics')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-blue-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Consumer Electronics</h4>
+                            <p class="text-gray-600 text-sm">Latest gadgets and devices for everyday use</p>
+                            <p class="text-blue-600 text-xs mt-2 font-medium">View Products →</p>
+                        </div>
+                        <div onclick="showProductGallery('industrial-components')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-blue-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Industrial Components</h4>
+                            <p class="text-gray-600 text-sm">High-grade components for manufacturing</p>
+                            <p class="text-blue-600 text-xs mt-2 font-medium">View Products →</p>
+                        </div>
+                        <div onclick="showProductGallery('smart-home')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-blue-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Smart Home Solutions</h4>
+                            <p class="text-gray-600 text-sm">Automated systems for modern homes</p>
+                            <p class="text-blue-600 text-xs mt-2 font-medium">View Products →</p>
+                        </div>
+                        <div onclick="showProductGallery('technical-support')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-blue-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Technical Support</h4>
+                            <p class="text-gray-600 text-sm">Expert assistance and maintenance</p>
+                            <p class="text-blue-600 text-xs mt-2 font-medium">View Services →</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Innovation First</h3>
+                    </div>
+                    <p class="text-gray-600 text-center mb-6">
+                        We stay ahead of technology trends to bring you the most advanced electronic solutions available.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Product Quality</span>
+                            <span class="font-semibold text-blue-600">99.8%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Customer Satisfaction</span>
+                            <span class="font-semibold text-blue-600">98.5%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">On-time Delivery</span>
+                            <span class="font-semibold text-blue-600">99.2%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('companies')" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold mr-4">
+                    Back to Companies
+                </button>
+                <button onclick="scrollToSection('contact')" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pure Business Solutions Details -->
+    <section id="pure-business" class="py-20 bg-green-50 hidden company-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pure Business Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Transforming businesses through strategic consulting and innovative solutions
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Proven Results</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">250+</div>
+                            <div class="text-gray-600">Successful Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">85%</div>
+                            <div class="text-gray-600">Average ROI Improvement</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">12</div>
+                            <div class="text-gray-600">Industry Sectors</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Business Services</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        We help businesses optimize their operations, embrace digital transformation, and achieve sustainable growth through strategic consulting and innovative solutions.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-gray-900 mb-2">Strategic Consulting</h4>
+                            <p class="text-gray-600 text-sm">Business planning and analysis</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-gray-900 mb-2">Digital Transformation</h4>
+                            <p class="text-gray-600 text-sm">Modern technology solutions</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-gray-900 mb-2">Process Optimization</h4>
+                            <p class="text-gray-600 text-sm">Streamline operations</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-gray-900 mb-2">Strategic Planning</h4>
+                            <p class="text-gray-600 text-sm">Long-term growth strategies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('companies')" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold mr-4">
+                    Back to Companies
+                </button>
+                <button onclick="scrollToSection('contact')" class="bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors font-semibold">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery Sections -->
+    <!-- Consumer Electronics Gallery -->
+    <section id="consumer-electronics-gallery" class="py-20 bg-blue-50 hidden product-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Consumer Electronics</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Latest gadgets and devices for everyday use
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Smartphones -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Smartphones</h3>
+                        <p class="text-gray-600 mb-4">Latest flagship and budget-friendly smartphones with cutting-edge features</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $299</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laptops -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Laptops & Computers</h3>
+                        <p class="text-gray-600 mb-4">High-performance laptops and desktop computers for work and gaming</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $599</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Devices -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Audio Devices</h3>
+                        <p class="text-gray-600 mb-4">Premium headphones, speakers, and sound systems for audiophiles</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $99</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-electronics')" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    Back to Pure Electronics
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrial Components Gallery -->
+    <section id="industrial-components-gallery" class="py-20 bg-blue-50 hidden product-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Industrial Components</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    High-grade components for manufacturing and industrial applications
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Circuit Boards -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Circuit Boards</h3>
+                        <p class="text-gray-600 mb-4">Custom PCBs and electronic circuit boards for industrial equipment</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">Custom Quote</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Get Quote</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sensors -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Industrial Sensors</h3>
+                        <p class="text-gray-600 mb-4">Precision sensors for temperature, pressure, and motion detection</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $45</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">View Catalog</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motors -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Electric Motors</h3>
+                        <p class="text-gray-600 mb-4">High-efficiency motors for industrial machinery and automation</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $199</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-electronics')" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    Back to Pure Electronics
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Home Gallery -->
+    <section id="smart-home-gallery" class="py-20 bg-blue-50 hidden product-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Smart Home Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Automated systems for modern homes
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Smart Lighting -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Smart Lighting</h3>
+                        <p class="text-gray-600 mb-4">WiFi-enabled LED bulbs and lighting systems with app control</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $29</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Systems -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Security Systems</h3>
+                        <p class="text-gray-600 mb-4">Smart cameras, door locks, and alarm systems for home security</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $149</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Climate Control -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Climate Control</h3>
+                        <p class="text-gray-600 mb-4">Smart thermostats and HVAC systems for optimal comfort</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-semibold">From $199</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-electronics')" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    Back to Pure Electronics
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support Gallery -->
+    <section id="technical-support-gallery" class="py-20 bg-blue-50 hidden product-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Support Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expert assistance and maintenance for all your electronic needs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Repair Services -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Device Repair Services</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Smartphone & Tablet Repair
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Laptop & Computer Repair
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Audio Equipment Service
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Home Appliance Repair
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Schedule Repair
+                    </button>
+                </div>
+
+                <!-- Installation Services -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Installation Services</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Smart Home Setup
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Network Configuration
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Security System Installation
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Audio/Video Setup
+                        </li>
+                    </ul>
+                    <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                        Book Installation
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-electronics')" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    Back to Pure Electronics
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pure Real Estate Details -->
+    <section id="pure-realestate" class="py-20 bg-purple-50 hidden company-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pure Real Estate</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Your trusted partner in residential, commercial, and investment real estate
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Real Estate Excellence</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Pure Real Estate combines market expertise with personalized service to help you find the perfect property or maximize your investment returns.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div onclick="showPropertyGallery('residential-sales')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-purple-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Residential Sales</h4>
+                            <p class="text-gray-600 text-sm">Dream homes and family properties</p>
+                            <p class="text-purple-600 text-xs mt-2 font-medium">View Properties →</p>
+                        </div>
+                        <div onclick="showPropertyGallery('commercial-properties')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-purple-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Commercial Properties</h4>
+                            <p class="text-gray-600 text-sm">Office spaces and retail locations</p>
+                            <p class="text-purple-600 text-xs mt-2 font-medium">View Properties →</p>
+                        </div>
+                        <div onclick="showPropertyGallery('investment-advisory')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-purple-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Investment Advisory</h4>
+                            <p class="text-gray-600 text-sm">Strategic investment guidance</p>
+                            <p class="text-purple-600 text-xs mt-2 font-medium">View Services →</p>
+                        </div>
+                        <div onclick="showPropertyGallery('property-management')" class="bg-white p-4 rounded-lg shadow cursor-pointer hover:shadow-lg hover:bg-purple-50 transition-all">
+                            <h4 class="font-semibold text-gray-900 mb-2">Property Management</h4>
+                            <p class="text-gray-600 text-sm">Full-service property care</p>
+                            <p class="text-purple-600 text-xs mt-2 font-medium">View Services →</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Market Leadership</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">$2.5B+</div>
+                            <div class="text-gray-600">Properties Sold</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">1,200+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">95%</div>
+                            <div class="text-gray-600">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('companies')" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold mr-4">
+                    Back to Companies
+                </button>
+                <button onclick="scrollToSection('contact')" class="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About Pure Group</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Founded in 2005 by Kawuma Yusuf, who serves as CEO, Pure Group of Companies was built on the principles of excellence, innovation, and integrity. Under his visionary leadership, the company has established itself as a leader across multiple industries.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our diversified portfolio allows us to serve a wide range of clients while maintaining the highest standards of quality and service. With decades of combined experience, our team brings expertise and dedication to every project.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">19+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">500+</div>
+                            <div class="text-gray-600">Happy Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">3</div>
+                            <div class="text-gray-600">Industries</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Values</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-indigo-600 text-sm font-bold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Excellence</h4>
+                                <p class="text-gray-600">Delivering superior quality in everything we do</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-indigo-600 text-sm font-bold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Innovation</h4>
+                                <p class="text-gray-600">Embracing new technologies and creative solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-indigo-600 text-sm font-bold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Integrity</h4>
+                                <p class="text-gray-600">Building trust through honest and transparent practices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Gallery Sections -->
+    <!-- Residential Sales Gallery -->
+    <section id="residential-sales-gallery" class="py-20 bg-purple-50 hidden property-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Residential Sales</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dream homes and family properties in prime locations
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Luxury Homes -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Luxury Homes</h3>
+                        <p class="text-gray-600 mb-4">Premium family homes with modern amenities and spacious layouts</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">From $450,000</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Apartments -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Family Apartments</h3>
+                        <p class="text-gray-600 mb-4">Comfortable apartments perfect for growing families</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">From $180,000</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starter Homes -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Starter Homes</h3>
+                        <p class="text-gray-600 mb-4">Affordable homes perfect for first-time buyers</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">From $120,000</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-realestate')" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                    Back to Pure Real Estate
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Properties Gallery -->
+    <section id="commercial-properties-gallery" class="py-20 bg-purple-50 hidden property-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Commercial Properties</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Office spaces and retail locations for your business needs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Office Buildings -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Office Buildings</h3>
+                        <p class="text-gray-600 mb-4">Modern office spaces in prime business districts</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">From $2,500/month</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">View Spaces</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Retail Spaces -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Retail Spaces</h3>
+                        <p class="text-gray-600 mb-4">High-traffic retail locations for your business</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">From $1,800/month</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">View Locations</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warehouses -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Warehouses</h3>
+                        <p class="text-gray-600 mb-4">Large storage and distribution facilities</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-purple-600 font-semibold">From $3,200/month</span>
+                            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">View Facilities</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-realestate')" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                    Back to Pure Real Estate
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Advisory Gallery -->
+    <section id="investment-advisory-gallery" class="py-20 bg-purple-50 hidden property-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Investment Advisory Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Strategic investment guidance for maximum returns
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Portfolio Analysis -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Portfolio Analysis</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Market Research & Analysis
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Risk Assessment
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            ROI Projections
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                            Diversification Strategies
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                        Get Analysis
+                    </button>
+                </div>
+
+                <!-- Investment Opportunities -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Investment Opportunities</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Rental Property Investments
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Commercial Real Estate
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Development Projects
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Land Banking
+                        </li>
+                    </ul>
+                    <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                        View Opportunities
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-realestate')" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                    Back to Pure Real Estate
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Management Gallery -->
+    <section id="property-management-gallery" class="py-20 bg-purple-50 hidden property-gallery">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Property Management Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Full-service property care for landlords and property owners
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Residential Management -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Residential Management</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Tenant Screening & Placement
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Rent Collection
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Maintenance & Repairs
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                            Property Inspections
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        Get Quote
+                    </button>
+                </div>
+
+                <!-- Commercial Management -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Commercial Management</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                            Lease Administration
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                            Facility Management
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                            Financial Reporting
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                            Vendor Management
+                        </li>
+                    </ul>
+                    <button class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 transition-colors font-semibold">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="showSection('pure-realestate')" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                    Back to Pure Real Estate
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to work with us? Contact our team to discuss your needs and discover how Pure Group can help you achieve your goals.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+
+                    <div class="space-y-6">
+                        <!-- Pure Electronics -->
+                        <div class="p-6 bg-blue-50 rounded-lg">
+                            <h4 class="text-lg font-bold text-blue-800 mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                                </svg>
+                                Pure Electronics
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="w-4 h-4 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-gray-700 font-medium">Gaza Land, Uganda</p>
+                                        <p class="text-gray-700">Harare, Zimbabwe</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                    <p class="text-gray-700">+256 (0) 704-234-059</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <p class="text-gray-700">electronics@puregroup.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pure Business Solutions -->
+                        <div class="p-6 bg-green-50 rounded-lg">
+                            <h4 class="text-lg font-bold text-green-800 mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                                Pure Business Solutions
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                    <p class="text-gray-700">Kampala Business District, Uganda</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                    <p class="text-gray-700">+256 (0) 704-234-059</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-green-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <p class="text-gray-700">business@puregroup.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pure Real Estate -->
+                        <div class="p-6 bg-purple-50 rounded-lg">
+                            <h4 class="text-lg font-bold text-purple-800 mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                                Pure Real Estate
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <svg class="w-4 h-4 text-purple-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-gray-700 font-medium">Munyonyo (Muwanga), Uganda</p>
+                                        <p class="text-gray-700">Kyanja, Uganda</p>
+                                        <p class="text-gray-700">Bwebajja (Akright), Uganda</p>
+                                        <p class="text-gray-700">Rubanga (City Apartments), Uganda</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                    <p class="text-gray-700">+256 (0) 704-234-059</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    <p class="text-gray-700">realestate@puregroup.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Company of Interest</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                <option>Pure Electronics</option>
+                                <option>Pure Business Solutions</option>
+                                <option>Pure Real Estate</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">PURE GROUP</div>
+                    <p class="text-gray-400 mb-4">Excellence across industries with innovation, integrity, and uncompromising quality.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Companies</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Pure Electronics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pure Business Solutions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pure Real Estate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#companies" class="hover:text-white transition-colors">Companies</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                            <span class="text-sm">📧</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                            <span class="text-sm">📱</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                            <span class="text-sm">🌐</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Pure Group of Companies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Add smooth scrolling to all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+
+        // Section navigation functionality
+        function showSection(sectionId) {
+            // Hide all company sections
+            const companySections = document.querySelectorAll('.company-section');
+            companySections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Hide all product galleries
+            const productGalleries = document.querySelectorAll('.product-gallery');
+            productGalleries.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Hide main sections
+            const mainSections = ['companies', 'about', 'contact'];
+            mainSections.forEach(id => {
+                const section = document.getElementById(id);
+                if (section) {
+                    section.classList.add('hidden');
+                }
+            });
+
+            // Show the requested section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Product gallery navigation
+        function showProductGallery(galleryId) {
+            // Hide all sections
+            const allSections = document.querySelectorAll('section[id]');
+            allSections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the requested gallery
+            const targetGallery = document.getElementById(galleryId + '-gallery');
+            if (targetGallery) {
+                targetGallery.classList.remove('hidden');
+                targetGallery.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Property gallery navigation
+        function showPropertyGallery(galleryId) {
+            // Hide all sections
+            const allSections = document.querySelectorAll('section[id]');
+            allSections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the requested gallery
+            const targetGallery = document.getElementById(galleryId + '-gallery');
+            if (targetGallery) {
+                targetGallery.classList.remove('hidden');
+                targetGallery.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Add active state to navigation links based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-indigo-600');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-indigo-600');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'978ce7a971358a49',t:'MTc1NjgxNTAzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
